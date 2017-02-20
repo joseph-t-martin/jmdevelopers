@@ -1,6 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _header = require('./components/header.js');
 
 var _header2 = _interopRequireDefault(_header);
@@ -27,33 +29,52 @@ var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import { browserHistory, Router, Route, IndexRoute } from './libraries/ReactRouter.min.js'
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var App = React.createClass({
-    displayName: 'App',
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-    render: function render() {
-        return React.createElement(
-            'div',
-            null,
-            React.createElement(_header2.default, null),
-            React.createElement(
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_React$Component) {
+    _inherits(App, _React$Component);
+
+    function App(props) {
+        _classCallCheck(this, App);
+
+        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+        $('.parallax').parallax();
+        //Materialize.updateTextFields();
+        return _this;
+    }
+
+    _createClass(App, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
                 'div',
-                { className: 'container' },
+                null,
+                React.createElement(_header2.default, null),
                 React.createElement(
                     'div',
-                    { className: 'row' },
+                    { className: 'container' },
                     React.createElement(
                         'div',
-                        { className: 'col s12' },
-                        this.props.children
+                        { className: 'row' },
+                        React.createElement(
+                            'div',
+                            { className: 'col s12' },
+                            this.props.children
+                        )
                     )
-                )
-            ),
-            React.createElement(_footer2.default, null)
-        );
-    }
-});
+                ),
+                React.createElement(_footer2.default, null)
+            );
+        }
+    }]);
+
+    return App;
+}(React.Component);
 
 ReactDOM.render(React.createElement(
     ReactRouter.Router,
@@ -68,108 +89,123 @@ ReactDOM.render(React.createElement(
     )
 ), document.getElementById('app'));
 
-$(document).ready(function () {
-    $('.parallax').parallax();
-    Materialize.updateTextFields();
-});
-
 },{"./components/contact_us.js":2,"./components/footer.js":3,"./components/header.js":4,"./components/home.js":5,"./components/pricing.js":6,"./components/services.js":7}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var ContactUs = React.createClass({
-    displayName: "ContactUs",
 
-    render: function render() {
-        return React.createElement(
-            "div",
-            null,
-            React.createElement(
-                "h4",
-                { className: "cyan-text text-darken-3" },
-                "Contact Us"
-            ),
-            React.createElement(
-                "p",
-                null,
-                "Small Sydney based web development shop that can help you build the website you want: "
-            ),
-            React.createElement(
-                "div",
-                { className: "row" },
-                React.createElement(
-                    "div",
-                    { className: "input-field col s6" },
-                    React.createElement(
-                        "i",
-                        { className: "material-icons prefix" },
-                        "account_circle"
-                    ),
-                    React.createElement("input", { id: "icon_prefix", type: "text", className: "validate" }),
-                    React.createElement(
-                        "label",
-                        { htmlFor: "icon_prefix" },
-                        "Name"
-                    )
-                )
-            ),
-            React.createElement(
-                "div",
-                { className: "row" },
-                React.createElement(
-                    "div",
-                    { className: "input-field col s6" },
-                    React.createElement(
-                        "i",
-                        { className: "material-icons prefix" },
-                        "email"
-                    ),
-                    React.createElement("input", { id: "email", type: "email", className: "validate" }),
-                    React.createElement(
-                        "label",
-                        { htmlFor: "email" },
-                        "Email"
-                    )
-                )
-            ),
-            React.createElement(
-                "div",
-                { className: "row" },
-                React.createElement(
-                    "div",
-                    { className: "input-field col s6" },
-                    React.createElement(
-                        "i",
-                        { className: "material-icons prefix" },
-                        "mode_edit"
-                    ),
-                    React.createElement("textarea", { id: "icon_prefix2", className: "materialize-textarea" }),
-                    React.createElement(
-                        "label",
-                        { htmlFor: "icon_prefix2" },
-                        "Message"
-                    )
-                )
-            ),
-            React.createElement(
-                "div",
-                { className: "row" },
-                React.createElement(
-                    "button",
-                    { className: "btn waves-effect waves-light", name: "action" },
-                    "Send Message",
-                    React.createElement(
-                        "i",
-                        { className: "material-icons right" },
-                        "send"
-                    )
-                )
-            )
-        );
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ContactUs = function (_React$Component) {
+    _inherits(ContactUs, _React$Component);
+
+    function ContactUs() {
+        _classCallCheck(this, ContactUs);
+
+        return _possibleConstructorReturn(this, (ContactUs.__proto__ || Object.getPrototypeOf(ContactUs)).apply(this, arguments));
     }
-});
+
+    _createClass(ContactUs, [{
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "h4",
+                    { className: "cyan-text text-darken-3" },
+                    "Contact Us"
+                ),
+                React.createElement(
+                    "p",
+                    null,
+                    "Small Sydney based web development shop that can help you build the website you want: "
+                ),
+                React.createElement(
+                    "div",
+                    { className: "row" },
+                    React.createElement(
+                        "div",
+                        { className: "input-field col s6" },
+                        React.createElement(
+                            "i",
+                            { className: "material-icons prefix" },
+                            "account_circle"
+                        ),
+                        React.createElement("input", { id: "icon_prefix", type: "text", className: "validate" }),
+                        React.createElement(
+                            "label",
+                            { htmlFor: "icon_prefix" },
+                            "Name"
+                        )
+                    )
+                ),
+                React.createElement(
+                    "div",
+                    { className: "row" },
+                    React.createElement(
+                        "div",
+                        { className: "input-field col s6" },
+                        React.createElement(
+                            "i",
+                            { className: "material-icons prefix" },
+                            "email"
+                        ),
+                        React.createElement("input", { id: "email", type: "email", className: "validate" }),
+                        React.createElement(
+                            "label",
+                            { htmlFor: "email" },
+                            "Email"
+                        )
+                    )
+                ),
+                React.createElement(
+                    "div",
+                    { className: "row" },
+                    React.createElement(
+                        "div",
+                        { className: "input-field col s6" },
+                        React.createElement(
+                            "i",
+                            { className: "material-icons prefix" },
+                            "mode_edit"
+                        ),
+                        React.createElement("textarea", { id: "icon_prefix2", className: "materialize-textarea" }),
+                        React.createElement(
+                            "label",
+                            { htmlFor: "icon_prefix2" },
+                            "Message"
+                        )
+                    )
+                ),
+                React.createElement(
+                    "div",
+                    { className: "row" },
+                    React.createElement(
+                        "button",
+                        { className: "btn waves-effect waves-light", name: "action" },
+                        "Send Message",
+                        React.createElement(
+                            "i",
+                            { className: "material-icons right" },
+                            "send"
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return ContactUs;
+}(React.Component);
 
 exports.default = ContactUs;
 
@@ -470,7 +506,7 @@ var Home = React.createClass({
             React.createElement(
                 "p",
                 null,
-                "Offering a wide range of services such as Web Development, Content Management Systems, Mobile Websites, System Integrations and Full Stack Development."
+                "Offering a wide range of services such as\xA0Web Development, Content Management Systems, Mobile Websites, System Integrations and Full Stack Development."
             ),
             React.createElement(
                 "strong",
@@ -490,12 +526,12 @@ var Home = React.createClass({
             React.createElement(
                 "p",
                 null,
-                "We are a small web and IT service company; with us you can  be assured of fast, efficient and friendly service. We are transparent about our charges, and work collaboratively with you to ensure the delivered product meets your needs. Please ask about our no-obligations on-site consultation service*"
+                "We are a small web and IT\xA0service company; with us you can\xA0 be assured of fast, efficient and\xA0friendly service. We are transparent\xA0about our charges, and work\xA0collaboratively with you to ensure\xA0the delivered product meets your\xA0needs. Please ask about our no-obligations on-site consultation\xA0service*"
             ),
             React.createElement(
                 "p",
                 null,
-                "*Within Sydney metropolitan region only"
+                "*Within Sydney metropolitan\xA0region only"
             )
         );
     }
@@ -551,7 +587,7 @@ var Pricing = React.createClass({
                     React.createElement(
                         "p",
                         { className: "center promo-text" },
-                        "Need work done fast? Mistakenly changed something you shouldn't have? We will provide an emergency out-of-hours service call to set things right."
+                        "Need work\xA0done fast? Mistakenly changed something you shouldn't have? We will provide an emergency out-of-hours service call to set things right."
                     )
                 )
             ),

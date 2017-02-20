@@ -5,10 +5,8 @@ import Pricing from './components/pricing.js';
 import ContactUs from './components/contact_us.js';
 import Footer from './components/footer.js';
 
-//import { browserHistory, Router, Route, IndexRoute } from './libraries/ReactRouter.min.js'
-
-var App = React.createClass({
-    render: function() {
+class App extends React.Component {
+    render() {
         return (
             <div>
                 <Header />
@@ -23,7 +21,7 @@ var App = React.createClass({
             </div>
         );
     }
-});
+}
 
 ReactDOM.render(
     <ReactRouter.Router history={ReactRouter.browserHistory}>
@@ -36,8 +34,3 @@ ReactDOM.render(
     </ReactRouter.Router>,
     document.getElementById('app')
 );
-
-$(document).ready(function(){
-    $('.parallax').parallax();
-    Materialize.updateTextFields();
-});

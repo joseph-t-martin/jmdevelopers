@@ -13,20 +13,25 @@
     <script src="/js/libraries/react.js"></script>
     <script src="/js/libraries/react-dom.js"></script>
     <script src="/js/libraries/browser.min.js"></script>
+    <script src="/js/libraries/ReactRouter.min.js"></script>
+
     <script src="/js/libraries/jquery.min.js"></script>
     <script src="/js/libraries/remarkable.min.js"></script>
-    <script src="/js/libraries/ReactRouter.min.js"></script>
 
     <script src="/js/materialize.min.js"></script>
     <script src="/js/init.js"></script>
-
-    <script type="text/babel" src="/js/bundle.js"></script>
-
 </head>
 
 <body>
     <div id="app">
     </div>
+    <script src="/js/bundle.js"></script>
+    <script>
+        $(function(){
+            $('.parallax').parallax();
+            Materialize.updateTextFields();
+        });
+    </script>
 </body>
 
 </html>

@@ -16,5 +16,5 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('**/*.js', ['browserify']);
+    gulp.watch('js/components/*.js', ['browserify']);
 });

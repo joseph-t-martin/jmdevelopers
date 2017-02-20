@@ -1,5 +1,5 @@
-var ContactUs = React.createClass({
-    render: function() {
+class ContactUs extends React.Component {
+    render() {
         return (
             <div>
                 <h4 className="cyan-text text-darken-3">Contact Us</h4>
@@ -35,6 +35,6 @@ var ContactUs = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default ContactUs;
