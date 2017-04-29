@@ -7,7 +7,7 @@ class Services extends React.Component {
                 <div id="card_data" className="row">
                     <div className="col s12 m4"><div className="card"><div className="card-content">
                         <h5>Website Design</h5>
-                        Know you want to update your website but not quite sure how? We offer a personal consultation service to help you determine what you need.
+                        Know you want to update your website but not quite sure how&#63; We offer a personal consultation service to help you determine what you need.
                     </div></div></div>
 
                     <div className="col s12 m4"><div className="card"><div className="card-content"><h5>Mobile Websites</h5>

@@ -10,7 +10,7 @@ class Pricing extends React.Component {
                     <div className="center promo">
                         <i className="material-icons icon-display">flash_on</i>
                         <h5 className="promo-caption"><b>$120/hr<br /> Emergency Service Call</b></h5>
-                        <p className="center promo-text">Need work done fast? Mistakenly changed something you shouldn't have? We will provide an emergency out-of-hours service call to set things right.</p>
+                        <p className="center promo-text">Need work done fast&#63; Mistakenly changed something you shouldn't have&#63; We will provide an emergency out-of-hours service call to set things right.</p>
                     </div>
                 </div>
                 <div className="col s12 m4">
