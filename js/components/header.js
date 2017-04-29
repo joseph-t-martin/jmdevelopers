@@ -1,6 +1,5 @@
-var Header = React.createClass({
-
-    render: function () {
+class Header extends React.Component {
+    render() {
         return (
         <div>
             <nav className="cyan darken-1" role="navigation">
@@ -31,7 +30,7 @@ var Header = React.createClass({
         </div>
         )
     }
-});
+};
 
 
 export default Header;

@@ -1,5 +1,5 @@
-var Home = React.createClass({
-    render: function() {
+class Home extends React.Component {
+    render() {
         return (
             <div>
                 <h4 className="cyan-text text-darken-3">Sydney Based Web Development</h4>
@@ -28,6 +28,6 @@ var Home = React.createClass({
             </div>
         )
     }
-});
+};
 
 export default Home;

@@ -1,5 +1,5 @@
-var Services = React.createClass({
-    render: function() {
+class Services extends React.Component {
+    render() {
         return (
             <div>
                 <h4 className="cyan-text text-darken-3">Services</h4>
@@ -36,6 +36,6 @@ var Services = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default Services;

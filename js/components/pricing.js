@@ -1,5 +1,5 @@
-var Pricing = React.createClass({
-    render: function() {
+class Pricing extends React.Component {
+    render() {
         return (
             <div>
                 <h4 className="cyan-text text-darken-3">Pricing</h4>
@@ -30,6 +30,6 @@ var Pricing = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Pricing;

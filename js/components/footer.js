@@ -1,5 +1,5 @@
-var Footer = React.createClass({
-    render : function () {
+class Footer extends React.Component {
+    render() {
         return (
             <div>
                 <footer className="page-footer orange">
@@ -37,6 +37,6 @@ var Footer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Footer;
