@@ -147,7 +147,7 @@ var ContactUs = function (_React$Component) {
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "http://backend.local/api/leads/store",
+                url: "http://api.jmdevelopers.com.au/api/leads/store",
                 data: {
                     name: this.state.name,
                     email: this.state.email,
